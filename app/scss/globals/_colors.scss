@@ -1,0 +1,70 @@
+:root {
+
+    /* Colors */
+    
+    // Primary
+    --lime-green: hsl(163, 72%, 41%);
+    --bright-red: hsl(356, 69%, 56%);
+    
+    --facebook: hsl(208, 92%, 53%);
+    --twitter: hsl(203, 89%, 53%);
+    --instagram: linear-gradient(35deg, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+    --youtube: hsl(348, 97%, 39%);
+    
+    // Dark Theme
+    --toggle-dark: linear-gradient(225deg, hsl(146, 68%, 55%), hsl(210, 78%, 56%));
+    
+    // Light Theme
+    --toggle-light: hsl(230, 22%, 74%);
+    --toggle-circle-dark: hsl(228, 28%, 20%);
+    --toggle-circle-light: hsl(227, 47%, 96%);
+
+    // Neutral
+    
+    // Dark Theme
+    --dark-bg: hsl(230, 17%, 14%);
+    --dark-bg-top: hsl(232, 19%, 15%);
+    --dark-bg-card: hsl(228, 28%, 20%);
+    --dark-text1: hsl(228, 34%, 66%);
+    --dark-text2: hsl(0, 0%, 100%);
+    --dark-text3: hsl(0, 0%, 85%);
+    --card-hover-dark: brightness(1.15);
+    
+    // Light Theme
+    --light-bg: hsl(0, 0%, 100%);
+    --light-bg-top: hsl(225, 100%, 98%);
+    --light-bg-card: hsl(227, 47%, 96%);
+    --light-text1: hsl(228, 12%, 44%);
+    --light-text2: hsl(230, 17%, 14%);
+    --card-hover-light: brightness(.95);
+
+    // variable variables
+    --background: var(--dark-bg);
+    --header-bg: var(--dark-bg-top);
+    --card-bg: var(--dark-bg-card);
+    --text-color1: var(--dark-text1);
+    --text-color2: var(--dark-text2);
+    --card-hover: var(--card-hover-dark);
+    }
+
+    @media (prefers-color-scheme: light) {
+        :root {
+            --background: var(--light-bg);
+            --header-bg: var(--light-bg-top);
+            --card-bg: var(--light-bg-card);
+            --text-color1: var(--light-text1);
+            --text-color2: var(--light-text2);
+            --card-hover: var(--card-hover-light);
+        }
+    }
+    
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --background: var(--dark-bg);
+            --header-bg: var(--dark-bg-top);
+            --card-bg: var(--dark-bg-card);
+            --text-color1: var(--dark-text1);
+            --text-color2: var(--dark-text2);
+            --card-hover: var(--card-hover-dark);
+        }
+    }

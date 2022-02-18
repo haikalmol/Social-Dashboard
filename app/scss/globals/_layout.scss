@@ -1,0 +1,66 @@
+@use '../utilities/mixins';
+
+// Main content
+.container {
+    display: grid;
+    gap: 46px;
+    position: relative;
+    top: -194px;
+}
+
+// Section top
+.s-top {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    @include mixins.padding;
+    align-items: center;
+
+    @media(min-width: 1140px) {
+        margin: 0 auto;
+        gap: 30px;
+    }
+}
+
+.cards-top-container {
+    display: grid;
+    gap: 24px;
+
+    @media(min-width: 1140px) {
+        display: flex;
+        gap: 30px;
+    }
+}
+// Section botton
+.s-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+    max-width: 1146px;
+}
+
+.s-bottom-w {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    @media(min-width: 1140px) {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        row-gap: 24px;
+        column-gap: 30px;
+    }
+}
+
+.s-bottom__title-w {
+    width: 326px;
+    margin-bottom: 27px;
+    align-self: start;
+}
+
+.s-bottom__title {
+    font-size: 24px;
+    font-weight: 700;
+}

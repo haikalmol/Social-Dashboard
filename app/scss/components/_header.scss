@@ -1,0 +1,52 @@
+@use '../utilities/mixins';
+
+// refer to namespace: 'padding' to use mixin
+.header {
+    @include mixins.padding;
+    padding-top: 36px;
+    background-color: var(--header-bg);
+    height: 235px;
+    border-radius: 0 0 15px 15px;
+
+    &-w {
+        width: 326px;
+        @media(min-width: 800px) {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1140px;
+            padding: 0 12px;
+            width: 100%;
+        }
+    }
+
+    &__title {
+        font-size: 24px;
+        font-weight: var(--fw-700);
+    }
+
+    &__subtitle {
+        font-size: 14px;
+        color: var(--dark-text1);
+    }
+
+    &__line {
+        height: 1px;
+        width: 100%;
+        display: inline-block;
+        background-color: #333A55;
+    
+        @media(min-width:800px) {
+            display: none;
+        }
+    }
+}
+
+.header.light-theme {
+    background-color: var(--light-bg-top);
+    color: var(--light-text2);
+}
+
+.header.dark-theme {
+    background: var(--dark-bg-top);
+    color: var(--dark-text2);
+}
